@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starbucks_app/src/pages/cart/cart_tab.dart';
 import 'package:starbucks_app/src/pages/home/components/category_tile.dart';
 import 'package:starbucks_app/src/config/app_data.dart' as app_data;
 import 'package:starbucks_app/src/pages/home/components/item_tile.dart';
@@ -42,7 +43,11 @@ class _HomeTabState extends State<HomeTab> {
             Padding(
               padding: const EdgeInsets.only(top: 15, right: 15),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+                    return const CartTab();
+                  }));
+                },
                 child: const Badge(
                   label: Text(
                     '2',
