@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starbucks_app/src/pages/card/card_tab.dart';
 import 'package:starbucks_app/src/pages/cart/cart_tab.dart';
 import 'package:starbucks_app/src/pages/home/home_tab.dart';
 
@@ -23,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
           const HomeTab(),
           const CartTab(),
           Container(color: Colors.purple),
-          Container(color: Colors.black),
+          const CardTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -51,7 +52,7 @@ class _BaseScreenState extends State<BaseScreen> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
-              label: 'Perfil',
+              label: 'Card',
             ),
           ]),
     );
