@@ -15,6 +15,39 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const SizedBox(
+          child: Center(
+            child: Image(
+              width: 50,
+              image: AssetImage(
+                "assets/images/logo_appbar.png",
+              ),
+            ),
+          ),
+        ),
+        leading: IconButton(
+            onPressed: () => Navigator.of(context).pop(),
+            icon: const Icon(Icons.arrow_back_ios, color: Colors.black)),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(top: 15, right: 15),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+                  return SignInScreen();
+                }));
+              },
+              child: const Icon(
+                Icons.favorite,
+                color: Colors.red,
+              ),
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Stack(children: [
@@ -22,15 +55,16 @@ class SignUpScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 30, left: 25),
                   child: Text(
-                    'Create an account',
+                    'Criar conta',
                     style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
+                const SizedBox(height: 25),
                 CustomTextField(
                   controller: usernameController,
                   hintText: 'Username',
@@ -157,19 +191,6 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
-              top: 10,
-              left: 10,
-              child: SafeArea(
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: const Icon(Icons.arrow_back_ios_outlined,
-                      color: Colors.grey),
-                ),
-              ),
-            )
           ]),
         ),
       ),
