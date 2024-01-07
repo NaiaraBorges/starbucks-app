@@ -11,29 +11,40 @@ class TransactionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+      margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: ListTile(
+        leading: Image.asset(
+          cartItem.item.imgUrl,
+          height: 60,
+          width: 60,
         ),
-        child: ListTile(
-          leading: Image.asset(
-            cartItem.item.imgUrl,
-            height: 60,
-            width: 60,
-          ),
-          title: Text(
-            cartItem.item.itemName,
-            style: const TextStyle(
-              fontWeight: FontWeight.w500,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              cartItem.item.itemName,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+              ),
             ),
+            const Text('-R\$15,00',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey,
+                )),
+          ],
+        ),
+        subtitle: const Text(
+          'Yesterday, 16:09 PM',
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 10,
           ),
-          subtitle: const Text(
-            'Yesterday, 16:09 PM',
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 10,
-            ),
-          ),
-        ));
+        ),
+      ),
+    );
   }
 }

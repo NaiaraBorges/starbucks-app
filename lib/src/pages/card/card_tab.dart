@@ -92,7 +92,12 @@ class CardTab extends StatelessWidget {
             const SizedBox(height: 25),
             const Padding(
               padding: EdgeInsets.only(left: 20),
-              child: Text('Recent Transaction'),
+              child: Text(
+                'Recent Transaction',
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+              ),
             ),
             Expanded(
               child: ListView.builder(

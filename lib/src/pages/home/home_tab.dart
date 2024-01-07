@@ -26,7 +26,7 @@ class _HomeTabState extends State<HomeTab> {
           title: const SizedBox(
             child: Center(
               child: Image(
-                width: 54,
+                width: 50,
                 image: AssetImage(
                   "assets/images/logo_appbar.png",
                 ),

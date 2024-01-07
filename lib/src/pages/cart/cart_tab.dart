@@ -32,108 +32,111 @@ class _CartTabState extends State<CartTab> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Center(
-          child: Image(
-            width: 50,
-            image: AssetImage(
-              "assets/images/logo_appbar.png",
-            ),
-          ),
-        ),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (c) {
-                return const BaseScreen();
-              }));
-            },
-            icon: const Icon(Icons.arrow_back_ios, color: Colors.black)),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(top: 15, right: 15),
-            child: GestureDetector(
-              onTap: () {},
-              child: const Badge(
-                label: Text(
-                  '2',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                  ),
-                ),
-                child: Icon(
-                  Icons.shopping_cart,
-                  color: Colors.black,
-                ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Center(
+            child: Image(
+              width: 50,
+              image: AssetImage(
+                "assets/images/logo_appbar.png",
               ),
             ),
           ),
-        ],
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(30),
-            child: Text('Carrinho',
-                style: TextStyle(
-                  fontSize: 20,
-                )),
-          ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: app_data.cartItems.length,
-              itemBuilder: (_, index) {
-                return CartTile(
-                  cartItem: app_data.cartItems[index],
-                  remove: removeItemFromCart,
-                );
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+                  return const BaseScreen();
+                }));
               },
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.black)),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(top: 15, right: 15),
+              child: GestureDetector(
+                onTap: () {},
+                child: const Badge(
+                  label: Text(
+                    '2',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const Text(
-                  'Total',
+          ],
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(30),
+              child: Text('Carrinho',
                   style: TextStyle(
-                    fontSize: 12,
-                  ),
-                ),
-                Text(
-                  utilsServices.priceToCurrency(cartTotalPrice()),
-                  style: const TextStyle(
-                    fontSize: 23,
-                    color: Color.fromRGBO(0, 98, 59, 10),
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  height: 50,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
-                    )),
-                    onPressed: () async {
-                      bool? result = await showOrderConfirmation();
-                      result;
-                    },
-                    child: const Text('Concluir pedido',
-                        style: TextStyle(
-                          fontSize: 18,
-                        )),
-                  ),
-                ),
-              ],
+                    fontSize: 20,
+                  )),
             ),
-          ),
-        ],
+            Expanded(
+              child: ListView.builder(
+                itemCount: app_data.cartItems.length,
+                itemBuilder: (_, index) {
+                  return CartTile(
+                    cartItem: app_data.cartItems[index],
+                    remove: removeItemFromCart,
+                  );
+                },
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const Text(
+                    'Total',
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
+                  Text(
+                    utilsServices.priceToCurrency(cartTotalPrice()),
+                    style: const TextStyle(
+                      fontSize: 23,
+                      color: Color.fromRGBO(0, 98, 59, 10),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      )),
+                      onPressed: () async {
+                        bool? result = await showOrderConfirmation();
+                        result;
+                      },
+                      child: const Text('Concluir pedido',
+                          style: TextStyle(
+                            fontSize: 18,
+                          )),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

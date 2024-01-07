@@ -95,21 +95,24 @@ class SignInScreen extends StatelessWidget {
                 */
                 SizedBox(
                   height: 50,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18)),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushReplacement(MaterialPageRoute(builder: (c) {
+                          return const BaseScreen();
+                        }));
+                      },
+                      child: const Text('Entrar',
+                          style: TextStyle(
+                            fontSize: 18,
+                          )),
                     ),
-                    onPressed: () {
-                      Navigator.of(context)
-                          .pushReplacement(MaterialPageRoute(builder: (c) {
-                        return const BaseScreen();
-                      }));
-                    },
-                    child: const Text('Entrar',
-                        style: TextStyle(
-                          fontSize: 18,
-                        )),
                   ),
                 ),
 
