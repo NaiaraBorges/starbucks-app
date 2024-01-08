@@ -65,7 +65,7 @@ class SignInScreen extends StatelessWidget {
                 //password textfield
                 CustomTextField(
                   controller: passwordController,
-                  hintText: 'Password',
+                  hintText: 'Senha',
                   isSecret: true,
                 ),
 
@@ -78,7 +78,7 @@ class SignInScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Forgot password?',
+                        'Esqueceu a senha?',
                         style: TextStyle(
                           color: Color.fromRGBO(0, 98, 59, 10),
                         ),
@@ -131,7 +131,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text('OR',
+                        child: Text('OU',
                             style: TextStyle(color: Colors.grey[700])),
                       ),
                       Expanded(
@@ -163,12 +163,11 @@ class SignInScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Don’t have an account?',
+                      'Não tem uma conta?',
                       style: TextStyle(
                         color: Colors.grey[700],
                       ),
                     ),
-                    const SizedBox(width: 4),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context)
@@ -176,7 +175,7 @@ class SignInScreen extends StatelessWidget {
                           return SignUpScreen();
                         }));
                       },
-                      child: const Text('Sign Up',
+                      child: const Text('Criar conta',
                           style: TextStyle(
                             color: Color.fromRGBO(0, 98, 59, 10),
                             fontWeight: FontWeight.bold,
