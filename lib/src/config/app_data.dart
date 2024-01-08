@@ -4,34 +4,34 @@ import 'package:starbucks_app/src/models/item_model.dart';
 ItemModel apple = ItemModel(
   description:
       'Dive into an adventure! Follow the Fantasy Tail Frappuccino® Blended Beverage.',
-  imgUrl: 'assets/images/coffee/coffee_1.png',
-  itemName: 'Fantasy Tail',
-  price: 5.5,
-  unit: 'kg',
+  imgUrl: 'assets/images/coffee/coffee_2.png',
+  itemName: 'Strawberry Cheesecake',
+  price: 19.5,
+  unit: 'un',
 );
 
 ItemModel grape = ItemModel(
   imgUrl: 'assets/images/coffee/coffee_5.png',
-  itemName: 'Frappuccino Avelã',
-  price: 13.90,
-  unit: 'kg',
+  itemName: 'Frappuccino Unicorn',
+  price: 21.5,
+  unit: 'ml',
   description:
       'Preparado com café, leite, essência de avelã e gelo batidos; a bebida é finalizada com chantilly e calda mocha.',
 );
 
 ItemModel guava = ItemModel(
-  imgUrl: 'assets/images/coffee/coffee_2.png',
+  imgUrl: 'assets/images/coffee/coffee_3.png',
   itemName: 'Strawberry Cheesecake',
-  price: 13.90,
+  price: 23.50,
   unit: 'kg',
   description:
       'Preparado com café, leite, essência de avelã e gelo batidos; a bebida é finalizada com chantilly e calda mocha.',
 );
 
 ItemModel kiwi = ItemModel(
-  imgUrl: 'assets/images/coffee/coffee_1.png',
+  imgUrl: 'assets/images/coffee/coffee_6.png',
   itemName: 'Coffee Latte Unicorn',
-  price: 2.5,
+  price: 19.5,
   unit: 'un',
   description:
       'O melhor kiwi da região e que conta com o melhor preço de qualquer quitanda. Este item conta com vitaminas essenciais para o fortalecimento corporal, resultando em uma vida saudável.',
@@ -39,17 +39,17 @@ ItemModel kiwi = ItemModel(
 
 ItemModel mango = ItemModel(
   imgUrl: 'assets/images/coffee/coffee_4.png',
-  itemName: 'Manga',
-  price: 2.5,
+  itemName: 'Sakura Frappuccino',
+  price: 21.5,
   unit: 'un',
   description:
-      'A melhor manga da região e que conta com o melhor preço de qualquer quitanda. Este item conta com vitaminas essenciais para o fortalecimento corporal, resultando em uma vida saudável.',
+      'Nesse frappuccino, pedacinhos de shiratama são rosa claro e aparecem na calda, que é combinada com uma base de leite feita com pó de flor de cerejeira e suco de morango e então misturada com gelo.',
 );
 
 ItemModel papaya = ItemModel(
-  imgUrl: 'assets/images/coffee/coffee_3.png',
-  itemName: 'Mamão papaya',
-  price: 8,
+  imgUrl: 'assets/images/coffee/coffee_1.png',
+  itemName: 'Matcha Frappuccino',
+  price: 23.50,
   unit: 'kg',
   description:
       'O melhor mamão da região e que conta com o melhor preço de qualquer quitanda. Este item conta com vitaminas essenciais para o fortalecimento corporal, resultando em uma vida saudável.',

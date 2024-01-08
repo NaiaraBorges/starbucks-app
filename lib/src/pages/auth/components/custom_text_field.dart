@@ -35,6 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         controller: widget.controller,
         obscureText: isObscure,
         decoration: InputDecoration(
+          contentPadding: const EdgeInsets.all(20),
           suffixIcon: widget.isSecret
               ? IconButton(
                   onPressed: () {
