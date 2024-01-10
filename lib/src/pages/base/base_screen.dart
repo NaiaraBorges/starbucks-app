@@ -25,6 +25,7 @@ class _BaseScreenState extends State<BaseScreen> {
           const CartTab(),
           Container(color: Colors.purple),
           const CardTab(),
+          Container(color: Colors.pink),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -53,6 +54,10 @@ class _BaseScreenState extends State<BaseScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
               label: 'Card',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.location_on),
+              label: 'Entrega',
             ),
           ]),
     );
