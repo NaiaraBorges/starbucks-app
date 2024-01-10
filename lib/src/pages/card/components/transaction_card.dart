@@ -32,7 +32,7 @@ class TransactionCard extends StatelessWidget {
             ),
             const Text('-R\$15,00',
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 10,
                   color: Colors.grey,
                 )),
           ],

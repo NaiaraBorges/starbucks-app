@@ -35,7 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         controller: widget.controller,
         obscureText: isObscure,
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.all(20),
+          contentPadding: const EdgeInsets.all(16),
           suffixIcon: widget.isSecret
               ? IconButton(
                   onPressed: () {
@@ -43,9 +43,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                       isObscure = !isObscure;
                     });
                   },
-                  icon:
-                      Icon(isObscure ? Icons.visibility : Icons.visibility_off),
-                  color: Colors.grey[600],
+                  icon: Icon(isObscure
+                      ? Icons.visibility_off_outlined
+                      : Icons.visibility),
+                  color: const Color.fromRGBO(60, 60, 67, 0.72),
                 )
               : null,
           enabledBorder: const OutlineInputBorder(
@@ -54,10 +55,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
           focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.white),
           ),
-          fillColor: Colors.grey.shade100,
+          fillColor: Colors.white,
           filled: true,
           hintText: widget.hintText,
-          hintStyle: TextStyle(color: Colors.grey[700]),
+          hintStyle: const TextStyle(
+            color: Color.fromRGBO(60, 60, 67, 0.72),
+            fontSize: 13,
+          ),
         ),
       ),
     );
