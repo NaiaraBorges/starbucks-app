@@ -77,14 +77,14 @@ class CardTab extends StatelessWidget {
               children: [
                 CardButton(imagePath: 'assets/images/wallet.png'),
                 CardButton(imagePath: 'assets/images/file.png'),
-                CardButton(imagePath: 'assets/images/file.png'),
+                CardButton(imagePath: 'assets/images/more.png'),
               ],
             ),
             const SizedBox(height: 10),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('Top up     ', style: TextStyle(fontSize: 12)),
+                Text('Carteira     ', style: TextStyle(fontSize: 12)),
                 Text('Portfolio    ', style: TextStyle(fontSize: 12)),
                 Text('More     ', style: TextStyle(fontSize: 12)),
               ],
@@ -93,7 +93,7 @@ class CardTab extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(left: 20),
               child: Text(
-                'Recent Transaction',
+                'Transações Recentes',
                 style: TextStyle(
                   fontSize: 12,
                 ),

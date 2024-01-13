@@ -23,24 +23,16 @@ class SignInScreen extends StatelessWidget {
         child: ListView(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 30,
-            ),
-
             const Image(
               image: AssetImage(
                 "assets/images/starbuckslogo.png",
               ),
-              width: 210,
-              height: 210,
-            ),
-
-            const SizedBox(
-              height: 5,
+              width: 320,
+              height: 320,
             ),
 
             //welcome back, you've been missed!
-            const Center(
+            /* const Center(
               child: Text(
                 'Welcome back you been missed!',
                 style: TextStyle(
@@ -50,8 +42,10 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
 
+            */
+
             const SizedBox(
-              height: 25,
+              height: 10,
             ),
 
             //username textfield
