@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:starbucks_app/src/pages/card/card_tab.dart';
 import 'package:starbucks_app/src/pages/cart/cart_tab.dart';
+import 'package:starbucks_app/src/pages/delivery/delivery_tab.dart';
 import 'package:starbucks_app/src/pages/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _BaseScreenState extends State<BaseScreen> {
           const CartTab(),
           Container(color: Colors.purple),
           const CardTab(),
-          Container(color: Colors.pink),
+          const DeliveryTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
