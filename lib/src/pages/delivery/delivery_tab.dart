@@ -17,9 +17,22 @@ class _DeliveryTabState extends State<DeliveryTab> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: GoogleMap(
-        initialCameraPosition: _kInitialPosition,
+    return Scaffold(
+      body: ListView(
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                const GoogleMap(
+                  initialCameraPosition: _kInitialPosition,
+                ),
+                Container(
+                  color: Colors.green,
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
