@@ -18,18 +18,27 @@ class _DeliveryTabState extends State<DeliveryTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Column(
         children: [
-          Expanded(
-            child: Column(
-              children: [
-                const GoogleMap(
-                  initialCameraPosition: _kInitialPosition,
+          const Expanded(
+            child: GoogleMap(
+              initialCameraPosition: _kInitialPosition,
+            ),
+          ),
+          Container(
+            height: 200,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/background.png"),
+                  fit: BoxFit.cover,
                 ),
-                Container(
-                  color: Colors.green,
-                )
-              ],
+                color: Colors.transparent,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(50))),
+          ),
+          Container(
+            height: 50,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(0, 98, 59, 10),
             ),
           ),
         ],
